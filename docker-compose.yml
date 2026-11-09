@@ -1,0 +1,30 @@
+services:
+  broadcaster:
+    build: .
+    container_name: lidar_broadcaster_node
+    volumes:
+      - ./data:/data:ro
+      - ./src:/app/src:ro
+    # Source ROS environment and run the broadcaster node
+    command: bash -c "source /opt/ros/jazzy/setup.bash && python3 /app/src/lidar_broadcaster.py"
+    networks:
+      - aeb_net
+    restart: "no"
+
+  braking:
+    build: .
+    container_name: emergency_braking_node
+    volumes:
+      - ./src:/app/src:ro
+      - ./results:/results:rw
+    # Source ROS environment and run the emergency braking node
+    command: bash -c "source /opt/ros/jazzy/setup.bash && python3 /app/src/emergency_braking.py"
+    networks:
+      - aeb_net
+    restart: "no"
+    depends_on:
+      - broadcaster
+
+networks:
+  aeb_net:
+    driver: bridge

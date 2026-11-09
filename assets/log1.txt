@@ -1,0 +1,4 @@
+--- Autonomous Emergency Braking (AEB) Report ---
+Processing Time: 729.28 ms
+Points inside Danger Zone: 97818
+System Decision: BRAKE!

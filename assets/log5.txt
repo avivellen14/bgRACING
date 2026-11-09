@@ -1,0 +1,5 @@
+--- Autonomous Emergency Braking (AEB) Report ---
+Filtering Mode: Dynamic Ground Estimation
+Processing Time: 745.91 ms
+Points inside Danger Zone: 6478
+System Decision: BRAKE!

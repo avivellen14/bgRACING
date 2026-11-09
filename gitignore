@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+
+# Ignore datasets and generated results, but keep the folders
+data/*.csv
+!data/.gitkeep
+results/*.png
+results/*.txt
+!results/.gitkeep
