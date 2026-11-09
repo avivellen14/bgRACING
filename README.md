@@ -21,7 +21,6 @@ The system is built using a shared Docker image based on Ubuntu 24.04 and ROS 2 
 
 ## Example Output
 *(The system successfully detected an obstacle at ~5.5m while filtering out the ground)*
-![AEB System Result]
 
 ## Prerequisites
 - Docker
